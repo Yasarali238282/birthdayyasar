@@ -1,0 +1,156 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Forever With Khushi ❤️</title>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+  font-family:Georgia,serif;
+  background:linear-gradient(135deg,#100b13,#291321,#0f0f0f);
+  color:white;
+  text-align:center;
+  min-height:100vh;
+  overflow-x:hidden;
+}
+section{padding:65px 20px}
+.hero{min-height:100vh;display:flex;flex-direction:column;
+justify-content:center;align-items:center}
+h1{font-size:clamp(38px,9vw,65px);color:#ffb6c1}
+h2{color:#ffb6c1;margin-bottom:20px}
+p{line-height:1.8;color:#f9dce5}
+.card{
+ max-width:650px;margin:25px auto;padding:30px;
+ background:rgba(255,255,255,.08);
+ border:1px solid rgba(255,182,193,.3);
+ border-radius:25px;
+ backdrop-filter:blur(12px);
+ box-shadow:0 10px 40px #0005;
+}
+button{
+ padding:14px 30px;border:0;border-radius:30px;
+ background:#ffb6c1;color:#321522;
+ font-size:17px;font-weight:bold;
+ cursor:pointer;margin:10px;
+ transition:.3s;
+}
+button:hover{transform:scale(1.08)}
+.heart{font-size:45px;animation:pulse 1s infinite}
+@keyframes pulse{50%{transform:scale(1.25)}}
+.float{
+ position:fixed;bottom:-30px;pointer-events:none;
+ animation:rise 7s linear forwards;z-index:5;
+}
+@keyframes rise{
+ to{transform:translateY(-110vh) rotate(360deg);opacity:0}
+}
+.hidden{display:none}
+.small{font-size:14px;color:#eabac8}
+footer{padding:30px;color:#ffb6c1}
+</style>
+</head>
+
+<body>
+
+<div class="hero">
+  <div class="heart">❤️</div>
+  <p>A little surprise for someone special</p>
+  <h1>My Khushi 🌹</h1>
+  <p>Some people make life beautiful...</p>
+  <p>And you make my world beautiful.</p>
+  <button onclick="document.getElementById('letter').scrollIntoView({behavior:'smooth'})">
+    Open Your Surprise 💌
+  </button>
+</div>
+
+<section id="letter">
+ <div class="card">
+  <h2>Dear Khushi ❤️</h2>
+  <p>
+   I don't know how to explain how special you are to me.
+   You are my smile on difficult days, my peace in chaos,
+   and the most beautiful part of my world.
+   <br><br>
+   I may not be perfect, but my love for you is real.
+   I want to make memories with you, laugh with you,
+   support you and choose you every single day.
+   <br><br>
+   Thank you for being my happiness.
+   <br><br>
+   Forever yours,<br>
+   <b style="color:#ffb6c1">Your Yasar ❤️</b>
+  </p>
+ </div>
+</section>
+
+<section>
+ <h2>Why You Are Special 💗</h2>
+ <div class="card">
+  <p>🌹 Your smile makes my day.</p>
+  <p>🫶 Your presence makes everything better.</p>
+  <p>💞 Your happiness means everything to me.</p>
+  <p>♾️ I want a lifetime of memories with you.</p>
+ </div>
+</section>
+
+<section>
+ <h2>One Question For You 💍</h2>
+ <div class="card">
+  <div class="heart">💗</div>
+  <h2>Khushi, Will You Be Mine Forever?</h2>
+  <p>Will you keep holding my hand through every chapter of life?</p>
+  <br>
+  <button onclick="yes()">YES, FOREVER! ❤️</button>
+  <button onclick="maybe()">Let Me Hug You First 🥹</button>
+  <h2 id="answer" style="margin-top:25px"></h2>
+ </div>
+</section>
+
+<section>
+ <div class="card">
+  <h2>My Promise To You ♾️</h2>
+  <p>
+   I promise to respect you, care for you,
+   celebrate your happiness and stand beside you.
+   <br><br>
+   No matter how many chapters life writes,
+   I hope we keep writing our story together.
+  </p>
+  <h2 style="margin-top:20px">Yasar ❤️ Khushi</h2>
+  <p class="small">Two hearts, one beautiful story.</p>
+ </div>
+</section>
+
+<footer>
+ Made with endless love ❤️<br>
+ Only for my Khushi 🌹
+</footer>
+
+<script>
+function floatHeart(){
+ const h=document.createElement('div');
+ h.className='float';
+ h.innerHTML=['❤️','💕','🌹','💗','✨'][Math.floor(Math.random()*5)];
+ h.style.left=Math.random()*100+'vw';
+ h.style.fontSize=(18+Math.random()*22)+'px';
+ document.body.appendChild(h);
+ setTimeout(()=>h.remove(),7000);
+}
+setInterval(floatHeart,500);
+
+function yes(){
+ document.getElementById('answer').innerHTML=
+ "Yayyy! I love you Khushi! ❤️🥹💍<br>Forever & Always!";
+ for(let i=0;i<40;i++)setTimeout(floatHeart,i*80);
+}
+function maybe(){
+ document.getElementById('answer').innerHTML=
+ "Sending you the biggest virtual hug! 🫂❤️";
+}
+</script>
+
+</body>
+</html>
